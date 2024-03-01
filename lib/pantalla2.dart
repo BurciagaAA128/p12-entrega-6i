@@ -16,10 +16,26 @@ class Pantalla2 extends StatelessWidget {
           children: [
             Text(argumento),
             ElevatedButton(
-                child: const Text("Regresar a pantalla1"),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+                child: const Text("Regresar a pantalla1",
+                    style: TextStyle(fontSize: 20)),
                 onPressed: () {
                   Navigator.pop(context);
-                })
+                }),
+            Container(
+              width: double.infinity,
+              height: 300,
+              child: Card(
+                margin: EdgeInsets.all(40),
+                child: Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Text(
+                    'Pantalla 2',
+                    style: TextStyle(fontSize: 50, color: Colors.blue),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
